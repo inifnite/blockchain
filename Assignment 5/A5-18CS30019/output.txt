@@ -1,0 +1,108 @@
+[
+  'org1',
+  'CreateHouse',
+  'a1',
+  'Teen Murti Marg Area, New Delhi',
+  '2000'
+]
+ 
+
+[ 'org2', 'ReadHouse', 'a1' ]
+{"NagarPalikaID":"a1","Owner":"Org1MSP","Address":"Teen Murti Marg Area, New Delhi","Size":2000} 
+
+[ 'org2', 'CreateHouse', 'b2', 'Mouseton, Calisota, U.S.', '200' ]
+ 
+
+[ 'org2', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"Org1MSP","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[
+  'org1',
+  'CreateHouse',
+  'a2',
+  '2nd Floor, MMM hall, IIT Kharagpur',
+  '200'
+]
+ 
+
+[ 'org1', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"Org1MSP","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"Org1MSP","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[ 'org1', 'TransferHouse', 'a4', 'GOI' ] 
+ERROR
+
+[ 'org2', 'CreateHouse', 'b1', 'Baker Street, London', '2000' ]
+ 
+
+[ 'org2', 'ReadHouse', '221B' ] 
+ERROR
+
+[ 'org2', 'TransferHouse', 'a2', 'BegalGovt' ] 
+ERROR
+
+[ 'org2', 'ReadHouse', 'b1' ]
+{"NagarPalikaID":"b1","Owner":"Org2MSP","Address":"Baker Street, London","Size":2000} 
+
+[ 'org1', 'ReadHouse', 'a5' ] 
+ERROR
+
+[ 'org1', 'TransferHouse', 'a2', 'BegalGovt' ]
+ 
+
+[ 'org1', 'TransferHouse', 'a1', 'Org2MSP' ]
+ 
+
+[ 'org1', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"Org2MSP","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"b1","Owner":"Org2MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[ 'org1', 'TransferHouse', 'a2', 'Org2MSP' ] 
+ERROR
+
+[ 'org1', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"Org2MSP","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"b1","Owner":"Org2MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[ 'org2', 'TransferHouse', 'a1', 'GOI' ]
+ 
+
+[ 'org2', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"GOI","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"b1","Owner":"Org2MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[ 'org2', 'TransferHouse', 'b3', 'Org1MSP' ] 
+ERROR
+
+[ 'org2', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"GOI","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"b1","Owner":"Org2MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[ 'org2', 'TransferHouse', 'b1', 'Org1MSP' ]
+ 
+
+[ 'org2', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"GOI","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"b1","Owner":"Org1MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200}] 
+
+[
+  'org1',
+  'CreateHouse',
+  'a3',
+  'Malibu, California, United States',
+  '1111'
+]
+ 
+
+[
+  'org2',
+  'CreateHouse',
+  'b3',
+  'Org2 Office, Org2 Road, Org2 City',
+  '1111'
+]
+ 
+
+[ 'org2', 'TransferHouse', 'a3', 'BegalGovt' ] 
+ERROR
+
+[ 'org2', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"GOI","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"a3","Owner":"Org1MSP","Address":"Malibu, California, United States","Size":1111},{"NagarPalikaID":"b1","Owner":"Org1MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200},{"NagarPalikaID":"b3","Owner":"Org2MSP","Address":"Org2 Office, Org2 Road, Org2 City","Size":1111}] 
+
+[ 'org1', 'GetAllHouses' ]
+[{"NagarPalikaID":"a1","Owner":"GOI","Address":"Teen Murti Marg Area, New Delhi","Size":2000},{"NagarPalikaID":"a2","Owner":"BegalGovt","Address":"2nd Floor, MMM hall, IIT Kharagpur","Size":200},{"NagarPalikaID":"a3","Owner":"Org1MSP","Address":"Malibu, California, United States","Size":1111},{"NagarPalikaID":"b1","Owner":"Org1MSP","Address":"Baker Street, London","Size":2000},{"NagarPalikaID":"b2","Owner":"Org2MSP","Address":"Mouseton, Calisota, U.S.","Size":200},{"NagarPalikaID":"b3","Owner":"Org2MSP","Address":"Org2 Office, Org2 Road, Org2 City","Size":1111}] 
+
